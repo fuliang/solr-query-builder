@@ -11,7 +11,7 @@ BoolQueryBuilder queryBuilder = new BoolQueryBuilder();
 							   		.must(new RangeQueryBuilder<Float>().field("price").from(10.2f).to(20.4f))
 							   		.should(new FieldQueryBuilder("departure", "天津"))
 							   		.should(new RangeQueryBuilder<Integer>().field("distance").from(0).to(3000))
-							   		.mustNot(new FieldQueryBuilder("wrapper", "ctrip"))
+							   		.mustNot(new FieldQueryBuilder("wrapperid", "ticket"))
 							   		.build();
 						
 		System.out.println("query=" + query);
